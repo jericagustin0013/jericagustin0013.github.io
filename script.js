@@ -1,6 +1,10 @@
 // Toggle Dark Mode
-document.getElementById("theme-toggle").addEventListener("click", () => {
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
+  themeToggle.textContent = document.body.classList.contains("dark-mode")
+    ? "☀️"
+    : "🌙";
 });
 
 // Smooth Scroll for Nav Links
@@ -12,6 +16,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
       top: target.offsetTop - 70,
       behavior: "smooth",
     });
+    document.querySelector(".nav-links").classList.remove("show");
   });
 });
 
@@ -27,5 +32,16 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.2 }
 );
-
 fadeEls.forEach((el) => observer.observe(el));
+
+// Mobile Menu Toggle
+const menuToggle = document.createElement("span");
+menuToggle.className = "menu-toggle";
+menuToggle.innerHTML = "☰";
+document
+  .querySelector(".nav-container")
+  .insertBefore(menuToggle, document.querySelector(".nav-links"));
+
+menuToggle.addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.toggle("show");
+});
