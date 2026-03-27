@@ -10,7 +10,9 @@ body {
   line-height: 1.6;
   background: #f5f6fa;
   color: #222;
-  transition: background 0.4s ease, color 0.4s ease;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
   scroll-behavior: smooth;
 }
 
@@ -64,7 +66,9 @@ a {
 .nav-links li a {
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
+  transition:
+    color 0.3s,
+    transform 0.2s;
 }
 
 .nav-links li a:hover {
@@ -81,7 +85,9 @@ a {
   padding: 8px 10px;
   cursor: pointer;
   font-size: 1.1em;
-  transition: transform 0.3s, background 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s;
 }
 
 #theme-toggle:hover {
@@ -147,6 +153,8 @@ h2 {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background 0.3s;
+  height: 72px;
+  align-content: center;
 }
 
 .skills-list li:hover {
@@ -175,7 +183,9 @@ h2 {
   padding: 18px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, background 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s;
 }
 
 .card:hover {
@@ -183,6 +193,13 @@ h2 {
   background: #eaf6ff;
 }
 
+.live-preview {
+  color: #0055a5;
+}
+
+.live-preview:hover {
+  text-decoration: underline;
+}
 /* FOOTER */
 footer {
   text-align: center;
@@ -274,7 +291,9 @@ footer a {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Ensures image corners are rounded */
@@ -385,7 +404,10 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
 .cert-card:hover {
@@ -455,6 +477,14 @@ footer a {
 
 .dark-mode .project-content h3 {
   color: #4cc3ff;
+}
+
+.dark-mode .live-preview {
+  color: #4cc3ff;
+}
+
+.dark-mode .live-preview:hover {
+  color: #ffd700;
 }
 
 .dark-mode .tech-list li {
